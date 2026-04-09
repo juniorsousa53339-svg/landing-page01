@@ -1,0 +1,116 @@
+.portfolio-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffffff, #F9F9F9);
+  overflow: hidden;
+}
+
+.portfolio-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  color: #1a2b27;
+  margin-bottom: 50px;
+}
+
+.carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.slides {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.card {
+  width: 280px;
+  height: 350px;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 8px;
+  background: #BAD5F2;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+/* ===== DOTS NO DESKTOP ===== */
+.dots {
+  display: none; /*  AQUI: Esconde os botões no computador */
+  margin-top: 30px;
+  justify-content: center;
+  gap: 15px;
+
+  label {
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+}
+
+/* ========================= */
+/* MOBILE (AJUSTES AQUI)  */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .portfolio-title {
+    /* ⬇ COMENTÁRIO: Aumente este valor para aumentar a fonte no mobile */
+    font-size: 42px;
+    margin-bottom: 30px;
+  }
+
+  .dots {
+    display: flex; /*  AQUI: Faz os botões aparecerem só no celular */
+  }
+
+  .slides {
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+  .card {
+    /* ⬇COMENTÁRIO: Diminua a 'min-width' e 'height' para diminuir a imagem no mobile */
+    min-width: 85%;  // Ex: mude para 70% se quiser ela bem menor
+    height: 320px;   // Ex: diminua para 250px se quiser encurtar a foto
+
+    margin: 0 auto;
+    transform: scale(0.95);
+  }
+
+  /* Movimento do carrossel no Mobile */
+  #item-1:checked ~ .carousel-container .slides { transform: translateX(7.5%); }
+  #item-2:checked ~ .carousel-container .slides { transform: translateX(-92.5%); }
+  #item-3:checked ~ .carousel-container .slides { transform: translateX(-192.5%); }
+
+  #item-1:checked ~ .dots label:nth-child(1),
+  #item-2:checked ~ .dots label:nth-child(2),
+  #item-3:checked ~ .dots label:nth-child(3) {
+    background: #91A8D1;
+    transform: scale(1.2);
+  }
+}

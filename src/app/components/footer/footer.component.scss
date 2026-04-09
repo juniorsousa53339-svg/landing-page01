@@ -1,0 +1,64 @@
+.footer-section {
+  width: 100%;
+  background-color: #91A8D1;
+  padding: 60px 0; // Altura do footer (Desktop)
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 25px 0; // Altura do footer (Mobile)
+  }
+}
+
+.footer-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // AJUSTE DESKTOP: Diminua o padding-left para o logo colar mais na esquerda
+  padding: 0 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+  }
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  // AJUSTE MOBILE: Altere o margin-left para mover o logo para o lado no celular
+  @media (max-width: 768px) {
+    margin-left: 0;
+    gap: 8px;
+  }
+
+  .Logo {
+    img {
+      height: 40px; // Ajuste o tamanho da sua imagem aqui
+      width: auto;
+    }
+  }
+
+  p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: rgba(241, 243, 245, 0.85);
+    margin: 0;
+
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+}
+
+.footer-spacer {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

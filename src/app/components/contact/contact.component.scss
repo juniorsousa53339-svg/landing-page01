@@ -1,0 +1,148 @@
+.contact-section {
+  display: block; // Garante que a seção se comporte como um bloco
+  width: 100%;    // Força a largura total da tela
+  background-color: #f8f9fa;
+  padding: 100px 0; // Padding apenas em cima e embaixo
+  overflow: hidden;
+
+  .contact-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto; // Centraliza o container na tela
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      text-align: center;
+      gap: 40px;
+    }
+  }
+
+  .contact-info {
+    flex: 1;
+    max-width: 550px;
+
+    .contact-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 48px;
+      color: #1a2b27;
+      margin: 0 0 20px 0;
+      line-height: 1.2;
+
+      @media (max-width: 768px) {
+        font-size: 36px;
+      }
+    }
+
+    .contact-description {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 35px;
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background-color: #91A8D1;
+      color: #ffffff;
+      padding: 16px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: darken(#91A8D1, 10%);
+        transform: translateY(-2px);
+      }
+
+      img {
+        width: 22px;
+        height: auto;
+      }
+    }
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-width: 300px;
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      @media (max-width: 992px) {
+        justify-content: center;
+      }
+
+      .icon-box {
+        width: 28px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      span {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 18px;
+        color: #555;
+        white-space: nowrap; // Evita que o texto quebre linha
+      }
+    }
+  }
+}
+
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  // Isso garante que não apareça nenhum texto "fantasma" (como aquele 1)
+  font-size: 18px;
+
+  .icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; // Tamanho padrão para os outros
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    // Estilo específico para o ícone que você quer maior
+    &.icon-phone-large {
+      width: 32px; // Aumentei de 24px para 32px
+      margin-left: -4px; // Ajuste fino de posição por ser maior
+    }
+  }
+}
+
+.btn-whatsapp {
+  // ... seus estilos anteriores ...
+  cursor: pointer;
+
+  img {
+    width: 24px; // Aumentei um pouco o ícone do botão também
+  }
+}

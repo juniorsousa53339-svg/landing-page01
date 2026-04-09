@@ -1,0 +1,134 @@
+/* ===== SECTION ===== */
+.services-section {
+  background-color: #f8f9fa;
+
+  /*  DESKTOP: DIMINUI pra subir */
+  padding: 500px 20px;
+
+  text-align: center;
+}
+
+
+/* ===== HEADER ===== */
+.services-header {
+  max-width: 800px;
+
+  /* espaço entre título e cards */
+  margin: 0 auto 40px;
+}
+
+.header-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+
+  /*  DESKTOP (AUMENTA AQUI) */
+  font-size: 72px;
+
+  color: #1a2b27;
+  margin-bottom: 15px;
+}
+
+.header-description {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+/* ===== CARDS ===== */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px 30px;
+  flex: 1;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.icon-container {
+  margin-bottom: 25px;
+}
+
+.icon-container img {
+  height: 80px;
+  width: auto;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  color: #1a2b27;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.card-footer-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #a5d8ff, #8ec5fc);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+
+/*  MOBILE */
+@media (max-width: 768px) {
+
+  .services-section {
+    /*  MOBILE: aumenta pra descer */
+    padding: 60px 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /*  MUDA O TÍTULO NO MOBILE */
+  .header-title {
+    font-size: 42px; /*  MUDA AQUI */
+  }
+
+  .header-description {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+}

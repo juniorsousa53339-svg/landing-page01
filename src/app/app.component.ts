@@ -1,10 +1,29 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
+import { ServicesComponent } from './components/services/services.component';
+import { HeroComponent } from './components/hero/hero.component';
+import { HeaderComponent } from './components/header/header.component';
+import { NgOptimizedImage } from '@angular/common';
+import { AboutComponent } from './components/about/about.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports:
+    [
+      RouterOutlet,
+      ServicesComponent,
+      HeroComponent,
+      HeaderComponent,
+      NgOptimizedImage,
+      AboutComponent,
+      PortfolioComponent,
+       ContactComponent,
+       FooterComponent
+    ]
+  ,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
